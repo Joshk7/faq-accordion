@@ -6,6 +6,7 @@
 
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -41,13 +42,14 @@ h6 {
     --white: #ffffff;
 
     /* typography */
-    --display: bold 3.5rem/normal "Work Sans";
-    --title: 600 1.125rem/normal "Work Sans";
+    --display: bold 3.5rem / normal "Work Sans";
+    --title: 600 1.125rem / normal "Work Sans";
     --body: normal 1rem/1.5 "Work Sans";
 }
 
 html {
     height: 100%;
+    background: var(--light-pink);
 }
 
 body {
@@ -77,13 +79,86 @@ main {
 
 .card {
     margin-block: auto;
+    max-width: 37.5rem;
     background: white;
     position: relative;
     z-index: 1;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.title {
+    font: bold 2rem / normal "Work Sans";
+    color: var(--dark-purple);
+}
+
+.accordion {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.accordion > * + * {
+    border-top: 0.0625rem solid var(--light-pink);
+    padding-top: 1.25rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--dark-purple);
+    cursor: pointer;
+}
+
+.item__label:hover {
+    color: var(--pink);
+}
+
+.item__label--header {
+    font: 600 1rem / normal "Work Sans";
+    color: inherit;
+}
+
+.radio {
+    appearance: none;
+    content: url("/assets/images/icon-plus.svg");
+    cursor: pointer;
+}
+
+.radio:checked {
+    content: url("/assets/images/icon-minus.svg");
 }
 
 .item__label:has(.radio:checked) + .item__description {
     display: block;
+}
+
+.item__description {
+    font: normal 0.875rem/1.5 "Work Sans";
+    color: var(--pale-purple);
 }
 
 .attribution {
@@ -96,4 +171,36 @@ main {
 
 .invisible {
     display: none;
+}
+
+@media screen and (min-width: 48rem) {
+    .card {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .title {
+        font: var(--display);
+    }
+
+    .accordion {
+        gap: 1.5rem;
+    }
+
+    .accordion > * + * {
+        padding-top: 1.5rem;
+    }
+
+    .item__label--header {
+        font: var(--title);
+    }
+
+    .item__description {
+        font: var(--body);
+    }
 }

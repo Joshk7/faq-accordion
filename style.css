@@ -160,16 +160,16 @@ main {
 .item__description {
     max-height: 0;
     overflow: hidden;
-    transition: 300ms ease-out;
+    transition: 350ms;
     font: normal 0.875rem/1.5 "Work Sans";
     color: var(--pale-purple);
 }
 
 .item__label:has(.radio:checked) + .item__description {
     margin-top: 1.5rem;
-    max-height: 200px; /* Adjust as needed */
+    max-height: 6.25rem; /* Adjust as needed */
     overflow: hidden;
-    transition: 350ms ease-in;
+    transition: 350ms;
 }
 
 

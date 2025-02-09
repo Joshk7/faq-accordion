@@ -144,6 +144,9 @@ main {
 
 .radio {
     appearance: none;
+    -webkit-appearance: none; /* Safari/Chrome */
+    -moz-appearance: none; /* Firefox */
+    -ms-appearance: none; /* Edge */
     content: url("/assets/images/icon-plus.svg");
     cursor: pointer;
 }

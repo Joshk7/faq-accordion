@@ -130,7 +130,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
     color: var(--dark-purple);
     cursor: pointer;
     font: 600 1rem / normal "Work Sans";

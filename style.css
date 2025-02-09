@@ -133,15 +133,11 @@ main {
     gap: 1.5rem;
     color: var(--dark-purple);
     cursor: pointer;
+    font: 600 1rem / normal "Work Sans";
 }
 
 .item__label:hover {
     color: var(--pink);
-}
-
-.item__label--header {
-    font: 600 1rem / normal "Work Sans";
-    color: inherit;
 }
 
 .radio {
@@ -206,7 +202,7 @@ main {
         padding-top: 1.5rem;
     }
 
-    .item__label--header {
+    .item__label {
         font: var(--title);
     }
 
